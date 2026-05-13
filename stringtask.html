@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>String Task</div>
+    <script>
+        //1.class f_name = “ JOHn .“ to “john”
+        let name = " JOHn ."
+        let f_name = name.trim()
+        console.log(f_name)
+        let new_name = f_name.replace(".", "")
+        console.log(new_name)
+        console.log(new_name.toLowerCase())
+
+
+        //2. a. sentence_one = “The Dog Breed is German Shepherd” only display “Breed is German”
+        let sentence_one = "The Dog Breed is German Shepherd"
+        console.log(sentence_one.slice(8, 23))
+
+
+        // b. sentence_two = “Defeats for the Clinton forces, this was her moment of triumph” only display “Clinton forces”
+        let sentence_two = "Defeats for the Clinton forces, this was her moment of triumph"
+        console.log(sentence_two.slice(16, 30))
+
+
+        // 3. Split the below sentence using a semicolon i.e ; And display length of the result.
+        // “The lazy dog; ran so fast; it hit the wall.”
+        let text = "The lazy dog; ran so fast; it hit the wall."
+        let text1 = text.split(";")
+        console.log(text1)
+        console.log(text1.length)
+
+    </script>
+</body>
+
+</html>
