@@ -16,3 +16,30 @@ console.log(Object.entries(person))//  ['name', 'jane Doe']
 
 person.name = "Alice"
 console.log(person) // {name: 'Alice', age: 29, address: '123 Kimathi St', is employed: true}
+
+// Creating an empty object
+// Adding properties to the object
+
+let myObject = { }
+myObject.name = "John"
+myObject.age = 25
+myObject['location'] = 'New York'
+
+console.log(myObject)
+
+
+// Accessing properties
+console.log(myObject.name)     // Output: John
+console.log(myObject['age'])   // Output: 25
+
+// Nested objects
+myObject.address = {
+    street: '123 Main St',
+    city: 'Anytown',
+    country: 'USA'
+}
+
+// Accessing properties in nested objects
+console.log(myObject.address.city);  // Output: Anytown
+
+

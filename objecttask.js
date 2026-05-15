@@ -16,6 +16,7 @@ console.log(my_arr[3][1])
 
 
 // 2. In the object with the key currency, add another key "amount" with value 90
+// my_arr[3][2]["amount"] = 90
 my_arr[3][2].amount = 90
 console.log(my_arr)
 
