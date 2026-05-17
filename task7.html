@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>Task 7</p>
+    </div>
+    <script>
+        // Write that prompts the user to input student marks. The input should be between 0 and 100.Then output the correct grade: 
+        // A > 79 , B - 60 to 79, C  > 49 to 59, D - 40 to 49, E - less 40
+        let score = Number(prompt("Enter student marks"))
+
+
+        if (score > 79 && score <= 100) {
+            console.log("grade A")
+        } else if (score >= 60 && score <= 79) {
+            console.log("grade B")
+        } else if (score > 49 && score <= 59) {
+            console.log("grade C")
+        } else if (score >= 40 && score <= 49) {
+            console.log("grade D")
+        } else if (score > 0 && score < 40) {
+            console.log("grade E")
+        } else {
+            console.log("Invalid Input")
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>Task 5</p>
+    </div>
+    <script>
+        // Implement a program that takes 3 users  inputs from the terminal or the Browser, and stores them in three variables. 
+        // Return the largest of the three. Do this without using the the inbuilt max () function!
+        // The goal of this exercise is to think about some internals that programs normally take care of for us.
+
+        let a = Number(prompt("Enter a number"))
+        let b = Number(prompt("Enter a number"))
+        let c = Number(prompt("Enter a number"))
+
+        let res;
+        if (a >= b && a >= c) {
+            res = `${a} is the largest`
+        } else if (b >= a && b >= c) {
+            res = `${b} is the largest`
+        } else {
+            res = `${c} is the largest`
+        }
+        console.log(res)
+
+        //back quotes work like f-strings in python and $
+    </script>
+</body>
+
+</html>

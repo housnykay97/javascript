@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>Task 3</p>
+    </div>
+    <script>
+        //Write a program which gets a phone number from a form input or terminal. Validates the phone number by checking if
+        // it starts with +254.. or 07.. or 7… or 254.. or 01... or  1.. Convert the number to start with +254… 
+        // e.g if a user enters “0712345678”, the program should display “+254712345678”
+        // e.g if a user enters “0112345678”, the program should display “+254112345678”
+        // e.g if a user enters “712345678”, the program should display “+254712345678”
+
+        let phone_number = prompt("Enter phone") //gets an input
+
+        // .replace() creates a new string and doesn't modify the original
+        let clean_number = phone_number.replace(/\s|-/g, "") //removes spaces/dashes using regex /\s|-/g and replaces them with an empty string or delete it
+
+        let phone;
+        if (clean_number.startsWith("+254") && clean_number.length == 13) {
+            phone = clean_number
+        } else if (clean_number.startsWith("254") && clean_number.length == 12) {
+            phone = "+" + clean_number
+        } else if ((clean_number.startsWith("07") || clean_number.startsWith("01")) && (clean_number.length == 10)) {
+            phone = "+254" + clean_number.slice(1) //.slice() removes the first zero
+        } else if ((clean_number.startsWith("7") || clean_number.startsWith("1")) && clean_number.length == 9) {
+            phone = "+254" + clean_number
+        } else {
+            phone = "Invalid Input"
+        }
+
+        console.log(phone)
+
+    </script>
+</body>
+
+</html>
