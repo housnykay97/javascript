@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>Task 12</p>
+    </div>
+    <script>
+        // Write a program that prints the largest of 4 inputs taken as input from a user.
+        let value1 = Number(prompt("Enter number"))
+        let value2 = Number(prompt("Enter number"))
+        let value3 = Number(prompt("Enter number"))
+        let value4 = Number(prompt("Enter number"))
+
+        let info;
+        if (value1 >= value2 && value1 >= value3 && value1 >= value4) {
+            info = `${value1} is the largest`
+        } else if (value2 >= value3 && value2 >= value4 && value2 >= value1) {
+            info = `${value2} is the largest`
+        } else if (value3 >= value4 && value3 >= value2 && value3 >= value1) {
+            info = `${value3} is the largest`
+        } else {
+            info = `${value4} is the largest`
+        }
+        console.log(info)
+
+
+        // using Math.max
+        // let info = Math.max(value1, value2, value3, value4);
+        // console.log(`${info} is the largest`);
+
+
+    </script>
+</body>
+
+</html>

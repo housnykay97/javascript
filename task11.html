@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>Task 11</p>
+    </div>
+    <script>
+        // Write a program that takes the date of birth of a person and the program outputs the age in terms of years,months,days 
+        // TODAY.datetime
+
+        let dob = prompt("Enter date of birth(YYYY-MM-DD)")
+        let current = prompt("Enter current date(YYYY-MM-DD)")
+
+        let dob_year = Number(dob.slice(0, 4)) // gets characters from index 0 to 3
+        let dob_month = Number(dob.slice(5, 7)) // gets characters from index 5 to 6
+        let dob_day = Number(dob.slice(8, 10)) // gets characters from index 8 to 9
+
+        let cur_year = Number(current.slice(0, 4)) 
+        let cur_month = Number(current.slice(5, 7)) 
+        let cur_day = Number(current.slice(8, 10)) 
+
+        let years = cur_year - dob_year
+        let months = cur_month - dob_month
+        let days = cur_day - dob_day
+
+        // if months are negative
+        if (months < 0) {
+            years = years - 1           // borrow one year(12months)
+            months = 12 + months        // add 12 months
+            if (days < 0) {             // check if days are also negative
+                months = months - 1     // borrow one month(30days)
+                days = 30 + days        // add 30 days
+            }
+        } else if (days < 0) {          //if days are negative, months positive
+            months = months - 1         // borrow one month(30days)
+            days = 30 + days            // add 30days
+            if (months < 0) {           // check again if borrowing made months negative
+                years = years - 1       // borrow one year
+                months = 12 + months    // add 12 months
+            }
+        }
+        console.log(`age: ${years} years, ${months} months, ${days} days`)
+
+    </script>
+</body>
+
+</html>

@@ -17,14 +17,14 @@
         // total number of demerit points.
         // For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function
         // should print: “License suspended”.
-        let speed = Number(prompt("Enter car speed"))
+        let speed = Number(prompt("Enter driver speed"))
         let speedlimit = 70
 
         let point;
         if (speed <= speedlimit) {
             point = 'Ok'
         } else {
-            let demeritpoints = Math.floor((speed - speedlimit) / 5)
+            let demeritpoints = Math.ceil((speed - speedlimit) / 5)
             if (demeritpoints > 12) {
                 point = 'License suspended'
             } else {

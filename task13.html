@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>Task 13</p>
+    </div>
+    <script>
+        // Write a program that takes the email and password as input from a user and checks if they are equal to “admin@mail.com” 
+        // and password is "Admin@123", if so then print "Login is Successful" and if not print "Invalid username or password". 
+        // ONLY accept 3 tries after which it notifies you that you have been blocked.
+
+        let correct_email = "admin@mail.com"
+        let correct_password = "Admin@123"
+        let attempts = 3
+
+        let message;
+
+        for (let i = 0; i < attempts; i++) {
+            let email = prompt("Enter email address")
+            let password = prompt("Enter password")
+
+            if (password === null || email === null) break;               // stop if a user clicks cancel
+
+            if ((email === correct_email) && (password === correct_password)) {
+                message = "Login is Successful"
+                break                                                      // stops the loop
+            } else {
+                message = "Invalid username or password"
+                console.log(message)                                    // shows invalid username/password
+
+                let remaining_tries = attempts - i - 1;
+                if (remaining_tries === 0) {
+                    message = 'You have been blocked';
+                } else {
+                    message = `Try again you have ${remaining_tries} attempts remaining`
+
+                }
+                console.log(message)                                    // shows message after each failed try
+            }
+        }
+        console.log(message)
+
+    </script>
+</body>
+
+</html>
